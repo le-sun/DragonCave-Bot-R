@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="230.0" prefWidth="510.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="DragcaveBot.Controller">
+  <children>
+    <TabPane prefHeight="386.0" prefWidth="644.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <tabs>
+        <Tab text="Main">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button fx:id="start" disable="false" layoutX="299.0" layoutY="163.0" mnemonicParsing="false" onAction="#start" text="Start" />
+                <Button fx:id="stop" layoutX="374.0" layoutY="163.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+                <Button fx:id="clear" layoutX="449.0" layoutY="163.0" mnemonicParsing="false" onAction="#clearOutput" text="Clear" />
+                <TextArea fx:id="output" editable="false" focusTraversable="true" layoutX="14.0" layoutY="14.0" prefWidth="240.99993896484375" wrapText="true" />
+                <PasswordField fx:id="password" layoutX="299.0" layoutY="92.0" prefHeight="22.999900000002526" prefWidth="200.0" />
+                <Button fx:id="login" layoutX="372.0" layoutY="128.0" mnemonicParsing="false" onAction="#login" text="Login" />
+                <Label layoutX="299.0" layoutY="14.0" text="Username" />
+                <Label layoutX="299.0" layoutY="76.0" text="Password" />
+                <TextField fx:id="username" layoutX="299.0" layoutY="30.0" onAction="#login" prefWidth="200.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Eggs">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <CheckBox fx:id="sa" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectAll" text="Select All" />
+                <CheckBox fx:id="rd" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" text="Red Dino" />
+                <CheckBox fx:id="bd" layoutX="135.0" layoutY="54.0" mnemonicParsing="false" text="Blue Dino" />
+                <CheckBox fx:id="yd" layoutX="266.0" layoutY="54.0" mnemonicParsing="false" text="Yellow Dino" />
+                <CheckBox fx:id="gd" layoutX="388.0" layoutY="54.0" mnemonicParsing="false" text="Green Dino" />
+                <CheckBox fx:id="g" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" text="Gold Dragon" />
+                <CheckBox fx:id="s" layoutX="135.0" layoutY="90.0" mnemonicParsing="false" text="Silver Dragon" />
+                <CheckBox fx:id="gw" layoutX="266.0" layoutY="90.0" mnemonicParsing="false" text="Golden Wyvren" />
+                <CheckBox fx:id="cd" layoutX="388.0" layoutY="90.0" mnemonicParsing="false" text="Copper Dragon" />
+                <CheckBox fx:id="md" layoutX="14.0" layoutY="127.0" mnemonicParsing="false" text="Magma Dragon" />
+                <CheckBox fx:id="id" layoutX="135.0" layoutY="127.0" mnemonicParsing="false" text="Ice Dragon" />
+                <CheckBox fx:id="td" layoutX="266.0" layoutY="127.0" mnemonicParsing="false" text="Thunder Dragon" />
+                <CheckBox fx:id="pd" layoutX="388.0" layoutY="127.0" mnemonicParsing="false" text="Paper Dragon" />
+                <CheckBox fx:id="x" layoutX="14.0" layoutY="163.0" mnemonicParsing="false" text="Xenowyrm" />
+                <CheckBox fx:id="bl" layoutX="135.0" layoutY="163.0" mnemonicParsing="false" text="Blusang Lindwurm" />
+                <CheckBox fx:id="cheese" layoutX="266.0" layoutY="163.0" mnemonicParsing="false" text="Cheese Dragon" />
+                <CheckBox fx:id="chicken" layoutX="388.0" layoutY="163.0" mnemonicParsing="false" text="Chicken" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Info">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="timeOutput" editable="false" layoutX="14.0" layoutY="30.0" prefWidth="45.0001220703125" />
+                <Label layoutX="14.0" layoutY="14.0" text="Time" />
+                <Label layoutX="91.0" layoutY="14.0" text="Wanted Eggs Size" />
+                <TextField fx:id="eggOutput" layoutX="91.0" layoutY="30.0" prefWidth="95.0" />
+                <TextArea fx:id="errorOutput" layoutX="268.0" layoutY="30.0" prefHeight="155.0" prefWidth="228.0" wrapText="true" />
+                <Label layoutX="268.0" layoutY="14.0" text="Errors" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
